@@ -29,7 +29,10 @@ class Users(db.Model, CRUD):
 
     def __init__(self, **kwargs):
         for key, value in kwargs.items():
-            setattr(self, str(key), str(value))
+            if key == 'password':
+                setattr(self, str(key), str(generate_password_hash(value)))
+            else:
+                setattr(self, str(key), str(value))
 
     def __repr__(self):
         return 'User #{} - {} {}'.format(
