@@ -112,6 +112,6 @@ class UsersUpdate(Resource):
             return resp
 
 
-api.add_resource(GetAllUsers, '')
+api.add_resource(GetAllUsers, '/')
 api.add_resource(UsersUpdate, '/<int:id>')
 api.add_resource(UserFilter, '/filter=<string:some_filter>')
