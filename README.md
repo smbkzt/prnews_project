@@ -1,8 +1,10 @@
 * Получить всех пользователей: GET http://localhost:5000/api/v1/users
 * Получить одного пользователя:  http://localhost:5000/api/v1/users/<user.id>
 * Удалить пользователя по ID: DELETE http://localhost:5000/api/v1/users/<user.id>
-* Создание пользователя: POST http://localhost:5000/api/v1/users
 * Поиск по полям: GET http://localhost:5000/api/v1/users/filter=first_name::Test....... (Без учета регистра)
+
+* Создание пользователя: POST http://localhost:5000/api/v1/users
+
 {
   "data": {
     "attributes": {
@@ -17,7 +19,9 @@
   }
 }
 
+
 * Изменение пользователя: PATCH http://localhost:5000/api/v1/users/<user.id>.json
+
 {
   "data": {
     "attributes": {
