@@ -20,7 +20,7 @@
 }
 
 
-* Изменение пользователя: PATCH http://localhost:5000/api/v1/users/<user.id>.json
+* Изменение пользователя: PATCH http://localhost:5000/api/v1/users/<user.id>
 
 {
   "data": {
