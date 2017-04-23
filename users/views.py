@@ -28,10 +28,15 @@ class UserFilter(Resource):
         # Объединяем полученные выше фильтры с оператором AND
         joined_filters = " AND ".join(create_filter)
 
-        found_users = Users.query.filter(joined_filters)
-        dumped_result = schema.dump(found_users, many=True).data
+        try:
+            found_users = Users.query.filter(joined_filters)
+            dumped_result = schema.dump(found_users, many=True).data
+            return dumped_result
 
-        return dumped_result
+        except SQLAlchemyError as e:
+            resp = jsonify({"error": str(e)})
+            resp.status_code = 400
+            return resp
 
     def post(self):
         pass
