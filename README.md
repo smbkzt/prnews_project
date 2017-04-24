@@ -1,4 +1,4 @@
-* Получить всех пользователей: GET http://localhost:5000/api/v1/users
+* Получить всех пользователей: GET http://localhost:5000/api/v1/users/
 * Получить одного пользователя:  http://localhost:5000/api/v1/users/<user.id>
 * Удалить пользователя по ID: DELETE http://localhost:5000/api/v1/users/<user.id>
 * Поиск по полям: GET http://localhost:5000/api/v1/users/filter=first_name::Test....... (Без учета регистра)
