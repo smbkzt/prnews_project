@@ -1,3 +1,20 @@
+# PR news company test
+
+### Prerequisites
+To use this app you need:
+```
+* python >= 3
+* Flask==0.12.1
+* Flask-RESTful==0.3.5
+* Flask-SQLAlchemy==2.2
+```
+
+### Installing
+```
+pip install -r req.txt
+```
+
+### Use
 * Получить всех пользователей: GET http://localhost:5000/api/v1/users/
 * Получить одного пользователя:  http://localhost:5000/api/v1/users/<user.id>
 * Удалить пользователя по ID: DELETE http://localhost:5000/api/v1/users/<user.id>
